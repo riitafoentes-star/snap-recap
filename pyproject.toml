@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snap-recap-pipeline"
+version = "0.1.0"
+description = "Snap Recap — AI-powered manga/manhwa recap video pipeline"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.8",
+    "numpy>=1.24",
+    "moviepy>=1.0",
+    "ffmpeg-python>=0.2",
+    "openai-whisper>=20231117",
+    "httpx>=0.25",
+    "pydantic>=2.0",
+    "hypothesis>=6.0",
+    "google-generativeai>=0.3",
+    "google-api-python-client>=2.0",
+    "python-dotenv>=1.0",
+    "pytest>=7.0",
+    "opentimelineio>=0.15",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "hypothesis>=6.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["src-python/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.setuptools.packages.find]
+where = ["src-python"]

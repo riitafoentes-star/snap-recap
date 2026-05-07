@@ -1,0 +1,56 @@
+# ── Environment / Secrets ───────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.Python
+pip-wheel-metadata/
+.pytest_cache/
+.hypothesis/
+*.pyo
+*.pyd
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# ── Node / Frontend ─────────────────────────────────────────────────────────
+node_modules/
+dist/
+.vite/
+*.local
+
+# ── Rust / Tauri ────────────────────────────────────────────────────────────
+src-tauri/target/
+src-tauri/WixTools/
+*.pdb
+
+# ── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ─────────────────────────────────────────────────────────────────────
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Pipeline output ─────────────────────────────────────────────────────────
+output/
+*.checkpoint
+*.otioz
